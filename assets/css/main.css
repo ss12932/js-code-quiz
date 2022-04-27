@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /* 2. Main Styling */
@@ -30,7 +31,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 2;
   background: #141e30; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -91,26 +92,123 @@ body {
   color: white;
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding: 1.4rem 0;
 }
 
-.rule-list {
+.rule-list,
+.choice-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   flex: 1;
   font-weight: 900;
+  margin: 2rem 2rem;
 }
+.rule-item {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+.rule-item:last-child {
+  margin-bottom: 0;
+}
+
 .section-container {
   display: flex;
   flex-direction: column;
   width: 60rem;
+  max-width: 90vw;
   height: 54rem;
   border-radius: 0.4rem;
-  letter-spacing: 0.3rem;
-  color: black;
+  letter-spacing: 0.2rem;
+  color: #000000;
   background-color: var(--clr-white);
+  box-shadow: 0 0 4rem 2rem rgba(var(--clr-white-rgb), 0.3);
 }
 
 .footer {
   display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 14rem;
+  padding: 1.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #000000;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: green;
+  animation: pulse 1.2s infinite;
+}
+
+.fa-circle-right {
+  margin-left: 0.3rem;
+}
+@keyframes pulse {
+  0 {
+    transform: scale(0.9);
+  }
+
+  70% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Question Container Styles */
+
+.question-container .header {
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+  border-radius: 0.4 0.4 0 0;
+  color: white;
+}
+
+.question-section-title {
+  margin-left: 2rem;
+}
+
+.choice-item {
+  padding: 0.2rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.choice-item:hover {
+  background-color: #414141;
+  transition: background-color 0.5s ease-in-out;
+}
+.choice-item:last-child {
+  margin-bottom: 0;
+}
+.timer {
+  align-self: flex-end;
+  margin: 0.8rem 0.8rem 0.8rem 0;
+}
+.time-bar {
+  width: 100%;
+  background-color: green;
+  height: 1rem;
 }
