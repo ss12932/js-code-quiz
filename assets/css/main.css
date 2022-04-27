@@ -181,7 +181,8 @@ body {
 
 .fa-js {
   color: yellow;
-  margin-right: 2rem;
+  margin-right: 3rem;
+  transform: scale(2);
 }
 .header {
   display: flex;
