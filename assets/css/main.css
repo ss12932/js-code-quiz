@@ -39,11 +39,38 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+/* 3. start button styling */
+
 .start-btn {
   min-width: 14rem;
   padding: 2rem;
   border-radius: 0.4rem;
-  font-weight: 800;
-  font-size: 1.6rem;
-  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.8rem;
+  background-color: #2782bb;
+  color: white;
+  border: none;
+  animation: radiate 2.2s infinite;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.start-btn:hover {
+  transform: scale(1.1);
+  animation: none;
+  box-shadow: 0 0 30px 15px #2782bb, 0 0 45px 25px rgba(255, 255, 255, 1);
+}
+
+@keyframes radiate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+  }
+
+  70% {
+    box-shadow: 0 0 3rem 1.8rem rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
