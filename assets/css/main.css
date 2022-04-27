@@ -1,0 +1,49 @@
+/* 1. General Styling */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* 2. Main Styling */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #141e30,
+    #243b55
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #141e30,
+    #243b55
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.start-btn {
+  min-width: 14rem;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
