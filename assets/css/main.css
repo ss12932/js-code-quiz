@@ -55,7 +55,7 @@ body {
   font-weight: bold;
   font-size: 1.8rem;
   background-color: var(--clr-blue);
-  color: white;
+  color: var(--clr-white);
   border: none;
   animation: radiate 2.2s infinite;
   cursor: pointer;
@@ -70,24 +70,27 @@ body {
 }
 
 /* 4. intro rule section Styling */
-.section-container .header {
+#form-container .header-container,
+#info-section .header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 .header {
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
   border-radius: 0.4rem 0.4rem 0 0;
-  color: white;
+  color: var(--clr-white);
   letter-spacing: 0.3rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  height: 9rem;
 }
 .content-section-title {
   margin: 0 0 0 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
   display: flex;
   justify-content: flex-start;
   padding: 1.4rem 0;
@@ -138,7 +141,7 @@ body {
   border: none;
   border-radius: 0.4rem;
   background-color: #000000;
-  color: white;
+  color: var(--clr-white);
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -155,6 +158,7 @@ body {
 /* Question Container Styles */
 
 .application-title {
+  font-size: 3rem;
   margin: 0 0 0 2rem;
 }
 
@@ -186,7 +190,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.8rem 0.8rem 1.8rem 0;
+  margin: 0.8rem 0.8rem 0.8rem 0;
 }
 .hud-wrapper {
   display: flex;
@@ -197,7 +201,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-weight: 900;
-  border: 2px solid white;
+  border: 2px solid var(--clr-white);
   border-radius: 0.4rem;
   padding: 1rem;
   background-color: crimson;
@@ -214,7 +218,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-weight: 900;
-  border: 2px solid white;
+  border: 2px solid var(--clr-white);
   border-radius: 0.4rem;
   padding: 1rem;
   margin-right: 0.2rem;
@@ -234,9 +238,11 @@ form {
 .form-section-title {
   text-align: center;
   font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .form-control {
-  background-color: dodgerblue;
+  background-color: var(--clr-blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,7 +285,7 @@ form {
 
 .submit-btn:hover {
   background-color: #32cd32;
-  color: white;
+  color: var(--clr-white);
   animation: none;
 }
 .form-btns {
@@ -302,7 +308,7 @@ form {
 
 .playagain-btn:hover {
   background-color: #32cd32;
-  color: white;
+  color: var(--clr-white);
 }
 .fa-crown {
   color: crimson;
@@ -324,7 +330,7 @@ form {
   margin-bottom: 2rem;
 }
 .footer {
-  height: 5rem;
+  height: 6rem;
 }
 /* keyframes */
 
