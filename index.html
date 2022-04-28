@@ -21,8 +21,8 @@
       <!-- <div class="btn-control">
         <button class="start-btn" id="start-btn">Start</button>
       </div> -->
-      <!-- intro rule section when start button pressed - will be dynamically rendered-->
-      <!-- <section class="section-container" id="intro-section">
+      <!-- info rule section when start button pressed - will be dynamically rendered-->
+      <!-- <section class="section-container" id="info-section">
         <header class="header">
           <h1 class="content-section-title">Quiz Rules</h1>
         </header>
@@ -52,16 +52,23 @@
           </div>
         </footer>
       </section> -->
+
       <!-- Question Section - will be dynamically rendered. initial markup to determine styling -->
-      <!-- <section class="section-container question-container">
+      <section class="section-container" id="question-container">
         <header class="header">
-          <div class="timer">
+          <div class="header-container">
             <h1 class="application-title">
               <i class="fa-brands fa-js"></i>Code Quiz
             </h1>
-            <div class="timer-hud">
-              <div class="time-left">Time Left:</div>
-              <div class="time">15</div>
+            <div class="hud-wrapper">
+              <div class="hs-hud">
+                <div class="hs-points">Pts</div>
+                <div class="highscore">10</div>
+              </div>
+              <div class="timer-hud">
+                <div class="time-left">Time</div>
+                <div class="time">15</div>
+              </div>
             </div>
           </div>
           <div class="time-bar"></div>
@@ -73,10 +80,10 @@
           <li class="choice-item"></li>
           <li class="choice-item"></li>
         </ol>
-      </section> -->
+      </section>
 
       <!-- Form Section - will be dynamically rendered. initial markup to determine styling -->
-      <section class="section-container question-container">
+      <!-- <section class="section-container" id="form-container">
         <header class="header">
           <div class="timer">
             <h1 class="application-title">
@@ -85,7 +92,20 @@
           </div>
         </header>
         <h1 class="form-section-title">Form</h1>
-      </section>
+        <form>
+          <div class="form-control">
+            <input
+              name="full-name"
+              class="form-input"
+              type="text"
+              placeholder="Enter full name"
+            />
+          </div>
+          <div class="form-control">
+            <button class="btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </section> -->
     </main>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/result.js"></script>
