@@ -228,16 +228,84 @@ form {
 }
 .form-section-title {
   text-align: center;
+  font-size: 3rem;
 }
 .form-control {
   background-color: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 85%;
+  height: 15rem;
 }
 
 .form-input {
+  font-size: 1.8rem;
+  font-weight: bold;
   border: none;
   border-radius: 0.4rem;
+  width: 80%;
+  padding: 1rem;
+}
+.bs-display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem;
 }
 
+.submit-btn {
+  background-color: yellow;
+  border: none;
+  border-radius: 0.4rem;
+  width: 14rem;
+  padding: 1.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  animation: radiate 2s infinite;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #32cd32;
+  color: white;
+  animation: none;
+}
+.form-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.playagain-btn {
+  width: 14rem;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.playagain-btn:hover {
+  background-color: #32cd32;
+  color: white;
+}
+.fa-crown {
+  color: crimson;
+  transform: scale(1.2);
+  margin-right: 2rem;
+}
+.fa-crown:hover {
+  color: gold;
+}
 /* keyframes */
 
 @keyframes radiate {

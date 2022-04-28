@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <title>Document</title>
+    <title>Home</title>
     <script
       src="https://kit.fontawesome.com/489fc29660.js"
       crossorigin="anonymous"
@@ -54,7 +54,7 @@
       </section> -->
 
       <!-- Question Section - will be dynamically rendered. initial markup to determine styling -->
-      <section class="section-container" id="question-container">
+      <!-- <section class="section-container" id="question-container">
         <header class="header">
           <div class="header-container">
             <h1 class="application-title">
@@ -80,32 +80,43 @@
           <li class="choice-item"></li>
           <li class="choice-item"></li>
         </ol>
-      </section>
+      </section> -->
 
       <!-- Form Section - will be dynamically rendered. initial markup to determine styling -->
-      <!-- <section class="section-container" id="form-container">
+      <section class="section-container" id="form-container">
         <header class="header">
-          <div class="timer">
+          <div class="header-container">
             <h1 class="application-title">
               <i class="fa-brands fa-js"></i>Code Quiz
             </h1>
+            <div class="hs-btn">
+              <a href="result.html"><i class="fa-solid fa-crown fa-xl"></i></a>
+              
+              </div>
+            </div>
           </div>
         </header>
-        <h1 class="form-section-title">Form</h1>
+        <h1 class="form-section-title">Game Over!</h1>
+        <div class="bs-display">
+          <div class="bs-text">Best Score</div>
+          <div class="best-score">10</div>
+        </div>
         <form>
           <div class="form-control">
             <input
               name="full-name"
               class="form-input"
               type="text"
-              placeholder="Enter full name"
+              placeholder="Enter Your Full Name!"
             />
           </div>
-          <div class="form-control">
-            <button class="btn" type="submit">Submit</button>
+
+          <div class="form-control form-btns">
+            <button class="submit-btn" type="submit">Submit</button>
+            <button class="playagain-btn">Play Again!</button>
           </div>
         </form>
-      </section> -->
+      </section>
     </main>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/result.js"></script>
