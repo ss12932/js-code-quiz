@@ -105,6 +105,14 @@ body {
   font-weight: 900;
   margin: 2rem 2rem;
 }
+
+.rule-list {
+  padding: 4rem;
+}
+
+.choice-list {
+  padding: 0;
+}
 .rule-item,
 .rank-item {
   font-weight: bold;
@@ -191,12 +199,14 @@ body {
   font-weight: bold;
   font-size: 1.8rem;
   margin-bottom: 2.5rem;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
   cursor: pointer;
+  list-style: none;
 }
 
 .choice-item:hover {
   background-color: #414141;
+  color: white;
   transition: background-color 0.3s ease-in-out;
 }
 
