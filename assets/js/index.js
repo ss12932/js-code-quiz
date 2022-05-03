@@ -1,7 +1,6 @@
 "strict mode";
 
 //variable declarations
-
 const startBtn = document.getElementById("start-btn");
 const main = document.getElementById("main");
 const infoSctn = document.getElementById("info-section");
@@ -12,11 +11,11 @@ const pointsCounter = document.querySelector(".ptsTotal");
 const timeBar = document.querySelector(".time-bar");
 const bestScore = document.querySelector(".best-score");
 const submitBtn = document.querySelector(".submit-btn");
-
 let ul, h1Question;
 let points = 0;
 let questionIndex = 0;
 let count = questions.length * 6;
+
 //question Array
 //callback Fns
 const initLS = function () {
@@ -94,13 +93,6 @@ const qSctnRender = function () {
   ul.setAttribute("class", "choice-list");
   ul.setAttribute("data-answer", currentQuestion.correctOption);
 
-  // for (let i = 0; i < currentQuestion.options.length; i++) {
-  //   const li = document.createElement("li");
-  //   li.setAttribute("class", "choice-item");
-  //   li.setAttribute("data-option", currentQuestion.options[i]);
-  //   li.textContent = currentQuestion.options[i];
-  //   ul.append(li);
-  // }
   currentQuestion.options.forEach((opt) => {
     const li = document.createElement("li");
     li.setAttribute("class", "choice-item");
