@@ -7,10 +7,10 @@ const main = document.getElementById("main");
 const infoSctn = document.getElementById("info-section");
 const nextBtn = document.getElementById("next-btn");
 const questionSection = document.getElementById("question-container");
+const formSection = document.getElementById("form-container");
 let ul, h1Question;
-
 let questionIndex = 0;
-let count = 2000;
+let count = questions.length * 6;
 console.log(count);
 //question Array
 //callback Fns
@@ -27,7 +27,10 @@ const removeStartButton = function () {
   startBtn.remove();
 };
 
-const gameOverRender = function () {};
+const gameOverRender = function () {
+  questionSection.remove();
+  formSection.classList.remove("section-hide");
+};
 
 const startTimer = function () {
   const countdownTimer = function () {
@@ -80,6 +83,7 @@ const removeQuestionSctn = function () {
 };
 
 const optionHandler = function (e) {
+  console.log(questionIndex);
   const currentTarget = e.currentTarget;
   const target = e.target;
   console.log(target);
