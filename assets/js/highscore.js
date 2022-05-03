@@ -15,7 +15,7 @@ const renderHSList = function () {
       .forEach((hs) => {
         const li = document.createElement("li");
         li.setAttribute("class", "rank-item");
-        li.textContent = `${hs.initials.padEnd(25, "---")}${hs.score}`;
+        li.textContent = `${hs.initials.padEnd(50, "---")}${hs.score}`;
         rankOl.append(li);
       });
     hsSctn.append(rankOl, footer);
