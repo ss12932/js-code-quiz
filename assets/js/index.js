@@ -11,6 +11,7 @@ const pointsCounter = document.querySelector(".ptsTotal");
 const timeBar = document.querySelector(".time-bar");
 const bestScore = document.querySelector(".best-score");
 const submitBtn = document.querySelector(".submit-btn");
+const heroTitle = document.querySelector(".hero-title");
 let ul, h1Question;
 let points = 0;
 let questionIndex = 0;
@@ -35,6 +36,7 @@ const storeInLS = function (key, value) {
 
 const removeStartButton = function () {
   startBtn.remove();
+  heroTitle.remove();
 };
 
 const handleFormSubmit = function (e) {

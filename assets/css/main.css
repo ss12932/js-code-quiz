@@ -25,7 +25,10 @@ body {
 }
 
 /* 2. Main Styling */
-
+.hero-title {
+  color: var(--clr-white);
+  font-size: 12rem;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -206,7 +209,7 @@ body {
 
 .choice-item:hover {
   background-color: #414141;
-  color: white;
+  color: var(--clr-white);
   transition: background-color 0.3s ease-in-out;
 }
 
