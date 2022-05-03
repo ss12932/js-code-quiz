@@ -9,29 +9,58 @@ const nextBtn = document.getElementById("next-btn");
 const questionSection = document.getElementById("question-container");
 const formSection = document.getElementById("form-container");
 const pointsCounter = document.querySelector(".ptsTotal");
+const timeBar = document.querySelector(".time-bar");
+const bestScore = document.querySelector(".best-score");
+const submitBtn = document.querySelector(".submit-btn");
+
 let ul, h1Question;
 let points = 0;
 let questionIndex = 0;
 let count = questions.length * 6;
-console.log(count);
 //question Array
 //callback Fns
 const initLS = function () {
-  const highScoreLS = JSON.parse(localStorage.getItem("highScore"));
+  const highScoreLS = JSON.parse(localStorage.getItem("hsResults"));
 
   //if not exist, set empty string
   if (!highScoreLS) {
-    localStorage.setItem("highScore", JSON.stringify([]));
+    localStorage.setItem("hsResults", JSON.stringify([]));
   }
+};
+
+const storeInLS = function (key, value) {
+  const arrFromLS = JSON.parse(localStorage.getItem(key));
+  arrFromLS.push(value);
+  localStorage.setItem(key, JSON.stringify(arrFromLS));
 };
 
 const removeStartButton = function () {
   startBtn.remove();
 };
 
+const handleFormSubmit = function (e) {
+  e.preventDefault();
+  const initials = document.getElementById("initials").value;
+  const score = bestScore.textContent;
+  if (initials) {
+    const scoreObj = {
+      initials: initials,
+      score: score,
+    };
+
+    storeInLS("hsResults", scoreObj);
+  } else {
+    alert("Please Enter your initials!");
+  }
+  submitBtn.setAttribute("disabled", "disabled");
+  submitBtn.textContent = "Submitted";
+};
+
 const gameOverRender = function () {
   questionSection.remove();
   formSection.classList.remove("section-hide");
+  bestScore.textContent = pointsCounter.textContent;
+  formSection.addEventListener("submit", handleFormSubmit);
 };
 
 const startTimer = function () {
@@ -102,7 +131,7 @@ const optionHandler = function (e) {
     const correctOption = currentTarget.getAttribute("data-answer");
     userOption === correctOption
       ? (points += 10)
-      : ((points -= 5), (count -= 5));
+      : ((points -= 5), (count -= 10));
     pointsCounter.textContent = points;
     questionIndex++;
     if (questionIndex < questions.length) {
