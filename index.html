@@ -37,7 +37,7 @@
             will be given 2 minutes to complete the quiz.
           </li>
           <li class="rule-item">
-            For each incorrect answer you will be deducted 10 seconds.
+            For Each correct answer, you will get 10 points, For each incorrect answer you will be deducted 10 seconds and 5 points.
           </li>
           <li class="rule-item">
             When all questions are answered, incomplete or the timer reaches 0,
@@ -58,7 +58,7 @@
         </footer>
       </section>
 
-      <!-- Question Section - will be dynamically rendered. initial markup to determine styling -->
+      <!-- Question Section -->
       <section class="section-container section-hide" id="question-container">
         <header class="header">
           <div class="header-container">
@@ -67,17 +67,19 @@
             </h1>
             <div class="hud-wrapper">
               <div class="hs-hud">
-                <div class="hs-points">Pts</div>
-                <div class="highscore"></div>
+                <div class="pts-text">Pts</div>
+                <div class="ptsTotal">0</div>
               </div>
               <div class="timer-hud">
                 <div class="time-left">Time</div>
-                <div class="time"></div>
+                <div class="time">0</div>
               </div>
             </div>
           </div>
           <div class="time-bar"></div>
         </header>
+
+               <!-- will be dynamically rendered -->
         <!-- <h1 class="question-section-title">Question</h1>
         <ol type="A" class="choice-list">
           <li class="choice-item"></li>
@@ -87,7 +89,7 @@
         </ol> -->
       </section>
 
-      <!-- Form Section - will be dynamically rendered. initial markup to determine styling -->
+      <!-- Form Section -->
       <section class="section-container section-hide" id="form-container">
         <header class="header">
           <div class="header-container">

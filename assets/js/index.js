@@ -8,7 +8,9 @@ const infoSctn = document.getElementById("info-section");
 const nextBtn = document.getElementById("next-btn");
 const questionSection = document.getElementById("question-container");
 const formSection = document.getElementById("form-container");
+const pointsCounter = document.querySelector(".ptsTotal");
 let ul, h1Question;
+let points = 0;
 let questionIndex = 0;
 let count = questions.length * 6;
 console.log(count);
@@ -63,13 +65,20 @@ const qSctnRender = function () {
   ul.setAttribute("class", "choice-list");
   ul.setAttribute("data-answer", currentQuestion.correctOption);
 
-  for (let i = 0; i < currentQuestion.options.length; i++) {
+  // for (let i = 0; i < currentQuestion.options.length; i++) {
+  //   const li = document.createElement("li");
+  //   li.setAttribute("class", "choice-item");
+  //   li.setAttribute("data-option", currentQuestion.options[i]);
+  //   li.textContent = currentQuestion.options[i];
+  //   ul.append(li);
+  // }
+  currentQuestion.options.forEach((opt) => {
     const li = document.createElement("li");
     li.setAttribute("class", "choice-item");
-    li.setAttribute("data-option", currentQuestion.options[i]);
-    li.textContent = currentQuestion.options[i];
+    li.setAttribute("data-option", opt);
+    li.textContent = opt;
     ul.append(li);
-  }
+  });
   //append structure
   main.append(questionSection);
   questionSection.append(h1Question, ul);
@@ -91,11 +100,10 @@ const optionHandler = function (e) {
     const userOption = target.getAttribute("data-option");
 
     const correctOption = currentTarget.getAttribute("data-answer");
-
-    if (userOption === correctOption) {
-    } else {
-      count -= 5;
-    }
+    userOption === correctOption
+      ? (points += 10)
+      : ((points -= 5), (count -= 5));
+    pointsCounter.textContent = points;
     questionIndex++;
     if (questionIndex < questions.length) {
       removeQuestionSctn();
@@ -135,3 +143,5 @@ const infoSectionLoad = function () {
 //Event Listeners AEL
 
 startBtn.addEventListener("click", infoSectionLoad);
+
+console.log(Object.values(questions));
