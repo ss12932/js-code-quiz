@@ -34,3 +34,11 @@ WHEN the game is over
 THEN I can save my initials and my score
 
 ```
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Contact
+
+Please Contact me at ss12932@my.bristol.ac.uk
