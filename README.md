@@ -14,7 +14,9 @@ https://github.com/ss12932/js-code-quiz
 
 ## Application Screenshot
 
-![Javascript Code Quiz](./assets/img/start-screenshot)
+![Javascript Code Quiz Start](./assets/img/start-screenshot.png)
+
+![Javascript Code Quiz Application](./assets/img/app-screenshot.png)
 
 ## User Story
 
