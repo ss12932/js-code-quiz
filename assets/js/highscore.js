@@ -10,8 +10,8 @@ const renderHSList = function () {
     const rankOl = document.createElement("ol");
     rankOl.setAttribute("class", "rank-list");
     highScoresList
-      .slice(0, 6)
       .sort((a, b) => b.score - a.score)
+      .slice(0, 6)
       .forEach((hs) => {
         const li = document.createElement("li");
         li.setAttribute("class", "rank-item");
